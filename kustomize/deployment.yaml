@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taste
+  labels:
+    app: taste
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: taste
+  template:
+    metadata:
+      labels:
+        app: taste
+    spec:
+      containers:
+        - name: taste
+          image: paulthedev007/taste:latest  # Your Spring Boot Docker image
+          ports:
+            - containerPort: 8080  # Spring Boot default port
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "prod"  # You can add Spring-specific profiles here, if needed
