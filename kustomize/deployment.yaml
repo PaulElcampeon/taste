@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: taste
-          image: paulthedev007/taste:1.0.0  # Your Spring Boot Docker image
+          image: paulthedev007/taste:18ba448d
           ports:
             - containerPort: 8080  # Spring Boot default port
           env:
