@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: taste
-          image: paulthedev007/taste:68baba46
+          image: paulthedev007/taste:c5eb3384
           ports:
             - containerPort: 8080  # Spring Boot default port
           env:
